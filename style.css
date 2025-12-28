@@ -1,4 +1,3 @@
-/* CSS RESET & BASE */
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +5,12 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
-html,
-body {
-  width: 100%;
+.container {
+  max-width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
-/* NAVIGATION */
 .nav-bar {
   width: 100%;
   padding: 20px 5%;
@@ -55,7 +52,6 @@ body {
   cursor: pointer;
 }
 
-/* HERO SECTION */
 .hero-section {
   height: 100vh;
   width: 100%;
@@ -129,7 +125,6 @@ body {
   transform: scale(1.05);
 }
 
-/* STATS & TIER CARDS */
 .stats-section {
   background: #f1ffc5;
   padding: 80px 5%;
@@ -241,7 +236,6 @@ body {
   color: #444;
 }
 
-/* PARTNERS */
 .partners-section {
   text-align: center;
   width: 100%;
@@ -269,7 +263,6 @@ body {
   height: 40px;
 }
 
-/* FEATURES LIST */
 .features-list {
   background: #fff;
   padding: 80px 5%;
@@ -290,16 +283,92 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  height: 70vh;
 }
 
 .f-card img {
-  height: 100px;
+  height: 50%;
 }
 .f-card p {
   font-size: 22px;
   font-weight: 700;
   line-height: 1.3;
   max-width: 200px;
+}
+.testimonials {
+  height: 70vh;
+  padding: 4rem 1rem;
+  background: #f5ffe8;
+}
+
+.testimonial-wrapper button {
+  position: absolute;
+  border-radius: 50px;
+  border: none;
+  background-color: #ffffff;
+  padding: 20px;
+  color: #0bb937;
+  font-size: 22px;
+}
+
+#b-c {
+  left: 6%;
+  top: 374%;
+}
+#b-d {
+  right: 6%;
+  top: 374%;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 40px;
+  width: 40%;
+  height: 40vh;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.stars {
+  color: #7fdc00;
+}
+
+.saved {
+  margin-left: auto;
+  background: #e5ffd6;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.review {
+  margin-top: 1.2rem;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .purple {
@@ -311,324 +380,6 @@ body {
 .pink {
   background: linear-gradient(180deg, #ffd7f7 0%, #ff56dc 100%);
 }
-
-/* APP PREVIEW (Pure CSS simplified version) */
-.payment-app-preview {
-  height: 80vh;
-  max-width: 100%;
-  padding: 4% 5%;
-  text-align: center;
-  background: #fff;
-}
-
-.stack-container {
-  height: 100%;
-  width: 100%;
-  /* height: 35vh; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.stack-card {
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  background: #fff;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.stack-card .label {
-  font-size: 27px;
-  color: #999;
-}
-.stack-card img {
-  height: 12vh;
-}
-.stack-card .amount {
-  font-size: 32px;
-  font-weight: 700;
-}
-.stack-card .tag {
-  background: #ecffdd;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 22px;
-}
-
-.app-tabs {
-  display: inline-flex;
-  background: #000;
-  padding: 18px;
-  border-radius: 40px;
-  margin-top: 30px;
-}
-
-.app-tabs button {
-  background: transparent;
-  border: none;
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 40px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.app-tabs button.active {
-  background: #fff;
-  color: #000;
-}
-
-/* CTA BOTTOM */
-.cta-bottom {
-  padding: 80px 5%;
-  text-align: center;
-  background: #fff;
-}
-
-.bottom-img {
-  width: 300px;
-  margin-bottom: 20px;
-}
-.cta-bottom h2 {
-  font-size: 40px;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-/* FAQ */
-.faq-section {
-  padding: 80px 5%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.faq-list {
-  margin-top: 40px;
-}
-.faq-item {
-  padding: 25px 0;
-  border-bottom: 1px solid #eee;
-  text-align: left;
-}
-.faq-item p {
-  font-size: 18px;
-  font-weight: 700;
-  color: #182547;
-}
-
-/* FOOTER */
-.main-footer {
-  min-height: 90vh;
-  background: #000;
-  color: #fff;
-  padding: 80px 5% 40px;
-}
-
-.footer-grid {
-  height: 60vh;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 50px;
-}
-
-.f-logo {
-  height: 40px;
-  margin-bottom: 20px;
-}
-.f-title {
-  font-size: 38px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #fff;
-}
-.f-text {
-  font-size: 26px;
-  color: #ccc;
-  line-height: 1.6;
-}
-
-.app-links {
-  display: flex;
-  gap: 15px;
-  margin-top: 15px;
-}
-.app-links img {
-  height: 35px;
-}
-
-.social-links {
-  display: flex;
-  gap: 15px;
-  margin-top: 15px;
-}
-.social-links i {
-  color: white;
-  height: 24px;
-}
-
-.footer-col a {
-  display: block;
-  color: #ccc;
-  text-decoration: none;
-  margin-bottom: 10px;
-  font-size: 26px;
-}
-
-.footer-bottom {
-  margin-top: 60px;
-  padding-top: 30px;
-  border-top: 2px solid #333;
-  text-align: center;
-  font-size: 14px;
-  color: #777;
-}
-
-.mt-1 {
-  margin-top: 10px;
-}
-.mt-2 {
-  margin-top: 20px;
-}
-#copyright {
-  font-size: 20px;
-  color: #777;
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 1024px) {
-  .nav-links {
-    display: none;
-  }
-  .fa-solid.fa-bars {
-    font-size: 24px;
-    color: #000;
-    display: block;
-  }
-  .hero-content h1 {
-    font-size: 42px;
-  }
-  .metrics-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .fa-solid.fa-bars {
-    font-size: 24px;
-    color: #000;
-    display: block;
-  }
-  .stats-section {
-    padding: 60px 20px;
-  }
-  .tier-card {
-    padding: 25px;
-  }
-  .m-val {
-    font-size: 40px;
-  }
-  .f-grid {
-    grid-template-columns: 1fr;
-  }
-  .cta-bottom h2 {
-    font-size: 30px;
-  }
-  .app-tabs {
-    display: none;
-  } /* Hide complex tabs on mobile */
-  .testimonial-card {
-    border-radius: 25px;
-  }
-  .cards-wrapper {
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .tier-info img {
-    height: 30px;
-  }
-  .fa-solid.fa-bars {
-    font-size: 24px;
-    color: #000;
-    display: block;
-  }
-  .hero-content h1 {
-    font-size: 32px;
-  }
-  .feature-item {
-    height: 220px;
-  }
-  .feat-label {
-    font-size: 20px;
-  }
-  .p-card {
-    width: 100%;
-  }
-  .testimonial-card.a {
-    display: none;
-  }
-  .testimonial-card.b {
-    width: 90%;
-    height: 40vh;
-  }
-  .feature-grid {
-    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-  }
-  .stack-card {
-    height: 100%;
-  }
-
-  .actions button {
-    width: 100%;
-  }
-
-  .stack-card .amount {
-    font-size: 25px;
-  }
-  .stack-card .label {
-    font-size: 16px;
-  }
-  .stack-card .tag {
-    font-size: 16px;
-  }
-  .payment-app-preview {
-    height: 50vh;
-  }
-  .card {
-    width: 120px;
-  }
-  .f-text {
-    font-size: 18px;
-  }
-  .footer-col a {
-    font-size: 20px;
-  }
-  .f-title {
-    font-size: 32px;
-  }
-  .footer-bottom {
-    margin-top: 200%;
-  }
-  #copyright {
-    font-size: 16px;
-  }
-  #b-d {
-    display: none;
-  }
-  #b-c {
-    display: none;
-  }
-}
-
-/* ================= PAYMENT SECTION ================= */
 .payments {
   padding: 4rem 1rem;
   text-align: center;
@@ -720,79 +471,317 @@ body {
   border: 2px solid #000;
 }
 
-/* ================= TESTIMONIALS ================= */
-.testimonials {
-  height: 70vh;
-  padding: 4rem 1rem;
-  background: #f5ffe8;
+.payment-app-preview {
+  height: 80vh;
+  max-width: 100%;
+  padding: 4% 5%;
+  text-align: center;
+  background: #fff;
 }
 
-.testimonial-wrapper button {
-  position: absolute;
-  border-radius: 50px;
-  border: none;
-  background-color: #ffffff;
-  padding: 28px;
-  color: #0bb937;
+.stack-container {
+  height: 100%;
+  width: 100%;
+  /* height: 35vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stack-card {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.stack-card .label {
+  font-size: 27px;
+  color: #999;
+}
+.stack-card img {
+  height: 12vh;
+}
+.stack-card .amount {
+  font-size: 32px;
+  font-weight: 700;
+}
+.stack-card .tag {
+  background: #ecffdd;
+  padding: 5px 15px;
+  border-radius: 20px;
   font-size: 22px;
 }
 
-#b-c {
-  left: 6%;
-  top: 332%;
-}
-#b-d {
-  right: 6%;
-  top: 332%;
-}
-
-.testimonials h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 3rem;
-}
-
-.testimonial-wrapper {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.testimonial-card {
-  background: #ffffff;
-  padding: 2rem;
+.app-tabs {
+  display: inline-flex;
+  background: #000;
+  padding: 18px;
   border-radius: 40px;
-  width: 40%;
-  height: 40vh;
+  margin-top: 30px;
 }
 
-.profile {
+.app-tabs button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.app-tabs button.active {
+  background: #fff;
+  color: #000;
+}
+
+.cta-bottom {
+  padding: 80px 5%;
+  text-align: center;
+  background: #fff;
+}
+
+.bottom-img {
+  width: 300px;
+  margin-bottom: 20px;
+}
+.cta-bottom h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.faq-section {
+  padding: 80px 5%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.faq-list {
+  margin-top: 40px;
+}
+.faq-item {
+  padding: 25px 0;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+.faq-item p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #182547;
+}
+
+.main-footer {
+  min-height: 90vh;
+  background: #000;
+  color: #fff;
+  padding: 80px 5% 40px;
+}
+
+.footer-grid {
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px;
+}
+
+.f-logo {
+  height: 40px;
+  margin-bottom: 20px;
+}
+.f-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.f-text {
+  font-size: 26px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.app-links {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  gap: 15px;
+  margin-top: 15px;
+}
+.app-links img {
+  height: 35px;
 }
 
-.profile img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+.social-links i {
+  color: white;
+  height: 24px;
 }
 
-.stars {
-  color: #7fdc00;
+.footer-col a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 26px;
 }
 
-.saved {
-  margin-left: auto;
-  background: #e5ffd6;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-}
-
-.review {
-  margin-top: 1.2rem;
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 2px solid #333;
+  text-align: center;
   font-size: 14px;
-  line-height: 1.5;
+  color: #777;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+.mt-2 {
+  margin-top: 20px;
+}
+#copyright {
+  font-size: 20px;
+  color: #777;
+}
+
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+  .fa-solid.fa-bars {
+    font-size: 24px;
+    color: #000;
+    display: block;
+  }
+  .hero-content h1 {
+    font-size: 42px;
+  }
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fa-solid.fa-bars {
+    font-size: 24px;
+    color: #000;
+    display: block;
+  }
+  .stats-section {
+    padding: 60px 20px;
+  }
+  .tier-card {
+    padding: 25px;
+  }
+  .m-val {
+    font-size: 40px;
+  }
+  .f-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-bottom h2 {
+    font-size: 30px;
+  }
+  .testimonial-card {
+    border-radius: 25px;
+  }
+  .cards-wrapper {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tier-info img {
+    height: 30px;
+  }
+  .fa-solid.fa-bars {
+    font-size: 24px;
+    color: #000;
+    display: block;
+  }
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  .feature-item {
+    height: 220px;
+  }
+  .feat-label {
+    font-size: 20px;
+  }
+  .p-card {
+    width: 100%;
+  }
+  .testimonial-card.a {
+    display: none;
+  }
+  .testimonial-card.b {
+    width: 90%;
+    height: 40vh;
+  }
+  .feature-grid {
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  }
+  .stack-card {
+    height: 100%;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+
+  .stack-card .amount {
+    font-size: 25px;
+  }
+  .stack-card .label {
+    font-size: 16px;
+  }
+  .stack-card .tag {
+    font-size: 16px;
+  }
+  .payment-app-preview {
+    height: 50vh;
+  }
+  .card {
+    width: 120px;
+  }
+  .f-text {
+    font-size: 18px;
+  }
+  .footer-col a {
+    font-size: 20px;
+  }
+  .f-title {
+    font-size: 32px;
+  }
+  .footer-bottom {
+    margin-top: 200%;
+  }
+  #copyright {
+    font-size: 16px;
+  }
+  #b-d {
+    display: none;
+  }
+  #b-c {
+    display: none;
+  }
+  .app-tabs {
+    padding: 10px;
+  }
+  .app-tabs button {
+    padding: 2px 5px;
+    font-size: 12px;
+  }
 }
